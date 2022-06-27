@@ -1,0 +1,3 @@
+rootProject.name = "BubbleView"
+include ':app'
+include ':bubblelibrary'
