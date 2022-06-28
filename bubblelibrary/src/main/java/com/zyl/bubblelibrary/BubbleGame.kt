@@ -2,7 +2,6 @@ package com.zyl.bubblelibrary
 
 import android.content.Context
 import android.opengl.GLES20
-import android.util.Log
 import android.view.MotionEvent
 import org.jbox2d.collision.shapes.CircleShape
 import org.jbox2d.collision.shapes.PolygonShape
@@ -200,9 +199,9 @@ open class BubbleGame(parent: Context?) {
                                     if (body.fixtureList.shape.radius < smallChangeBigValue){
                                         body.fixtureList.shape.radius =
                                             body.fixtureList.shape.radius + animTime
-                                        Log.e("http","------>radius="+body.fixtureList.shape.radius);
+//                                        Log.e("http","------>radius="+body.fixtureList.shape.radius);
                                     } else{
-                                        Log.e("http","------>radius=end="+body.fixtureList.shape.radius);
+//                                        Log.e("http","------>radius=end="+body.fixtureList.shape.radius);
                                         bubbleBean.isAnim = false
                                     }
                                 }
