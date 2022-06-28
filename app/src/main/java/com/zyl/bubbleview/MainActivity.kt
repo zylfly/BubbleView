@@ -112,6 +112,7 @@ class MainActivity : AppCompatActivity(), GLSurfaceView.Renderer {
                     smallWhPx = 114.0f
                     maxBallRadius = 2.0499995f
                     smallChangeBigValue = 2f
+//                    animTime = 0.10f
                     setOnChildClick(object : BubbleGame.OnChildClick {
 
                         override fun onChildClick(id: Int) {

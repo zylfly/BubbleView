@@ -31,13 +31,14 @@ open class BubbleGame(parent: Context?) {
     private var moveY = 0.0
     private var ballNum: Int = 0
     var minBallRadius = 1.5f
-    var maxBallRadius = 2.9499986f
+    var maxBallRadius = 2.999999f
     var smallChangeBigValue = 2.9f
     var applyType = 0 //默认是稳定加速的力
     var bigWhPx = 660.0f //这个是根据你图片像素的宽高
     var smallWhPx = 255.0f
     var virtualHeight = 0f
     var changeId = 0
+    var animTime = 0.05f //小球动画速度
     private val mVec2List = arrayListOf(
         Vec2(6.5f, 3.6f),
         Vec2(3.0f, 5.8f),
@@ -196,11 +197,11 @@ open class BubbleGame(parent: Context?) {
                         bubbleBean.id?.let {
                             if (bubbleBean.isSelector) {
                                 if (bubbleBean.isAnim) {
-                                    if (body.fixtureList.shape.radius < smallChangeBigValue){
+                                    if (body.fixtureList.shape.radius < smallChangeBigValue) {
                                         body.fixtureList.shape.radius =
                                             body.fixtureList.shape.radius + animTime
 //                                        Log.e("http","------>radius="+body.fixtureList.shape.radius);
-                                    } else{
+                                    } else {
 //                                        Log.e("http","------>radius=end="+body.fixtureList.shape.radius);
                                         bubbleBean.isAnim = false
                                     }
@@ -331,7 +332,6 @@ open class BubbleGame(parent: Context?) {
     companion object {
         private const val PUSH_STRENGTH = 10000
         const val baseUnits = 13f //
-        const val animTime = 0.05f //
         val maxBall = 10//max生成的球10个  这个要改变 连同mVec2List位置一直更新不然报错
     }
 
