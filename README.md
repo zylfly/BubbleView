@@ -1,5 +1,5 @@
 # BubbleView
-jbox2d openGl use 悬浮气泡
+jbox2d openGl use 悬浮气泡 碰撞
 
 ### 效果
 
