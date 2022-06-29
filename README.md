@@ -22,7 +22,7 @@ jbox2d openGl use
   
  ### 3、在项目中使用：
   
-  # 1.layout中调用
+  #### 1.layout中调用
   
     <com.zyl.bubblelibrary.BubbleView
         android:id="@+id/bubbleView"
@@ -33,7 +33,7 @@ jbox2d openGl use
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
         
-  # 2.activity中调用
+  #### 2.activity中调用
   
     bubbleView
             .addSmallBit(mImageReSmallId)
@@ -51,7 +51,7 @@ jbox2d openGl use
             }
        
        
-   # 3.生命周期
+   #### 3.生命周期
     
      override fun onResume() {
         super.onResume()
