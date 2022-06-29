@@ -7,7 +7,7 @@ jbox2d openGl use 悬浮气泡
 
 ### 1、在自己项目中添加本项目依赖：
 
-    implementation 'com.github.zylRookie:BubbleView:1.0.5'
+    implementation 'com.github.zylfly:BubbleView:1.0.5'
 
 ### 2、在根目录中添加：
 
