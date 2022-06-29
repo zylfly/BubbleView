@@ -27,11 +27,7 @@ jbox2d openGl use 悬浮气泡
     <com.zyl.bubblelibrary.BubbleView
         android:id="@+id/bubbleView"
         android:layout_width="match_parent"
-        android:layout_height="334dp"
-        android:background="#7EB38A"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="334dp" />
         
   #### 2.activity中调用
   
