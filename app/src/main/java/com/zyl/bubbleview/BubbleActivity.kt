@@ -25,6 +25,7 @@ class BubbleActivity : AppCompatActivity() {
             val bigBit = BitmapFactory.decodeResource(resources, R.mipmap.ball_big)
             mImageReBigId.add(BodyBitmapInfo(i, i, "我是第${i}个", bigBit))
         }
+        //调用顺序最好别改
         bubbleView
             .addSmallBit(mImageReSmallId)
             .addBigBit(mImageReBigId)
