@@ -1,5 +1,6 @@
 package com.zyl.bubbleview
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.PixelFormat
 import android.opengl.GLES20
@@ -8,6 +9,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import android.widget.Toast
 import com.zyl.bubblelibrary.BodyBitmapInfo
 import com.zyl.bubblelibrary.BubbleGLSurfaceView
@@ -25,9 +27,9 @@ import javax.microedition.khronos.opengles.GL10
 class MainActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     private var mAccumulator = 0.0f
     private var mLastTicks: Long = -1
-    lateinit var bubbleGLSurfaceView: BubbleGLSurfaceView
     private var mBubbleGame: BubbleGame? = null
     private val ballSize = 7
+    lateinit var bubbleGLSurfaceView: BubbleGLSurfaceView
     private val mImageReSmallId = mutableListOf<BodyBitmapInfo>()
     private val mImageReBigId = mutableListOf<BodyBitmapInfo>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -148,5 +150,9 @@ class MainActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     override fun onDestroy() {
         super.onDestroy()
         mBubbleGame?.destroy()
+    }
+
+    fun bubble(view: View) {
+        startActivity(Intent(this, BubbleActivity::class.java))
     }
 }
